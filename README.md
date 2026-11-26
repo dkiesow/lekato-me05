@@ -13,14 +13,14 @@ It is unofficial and has no connection to Lekato.
 ## Status
 
 - Tested on **one pedal, firmware V1.1.1**. Other Lekato models and other firmware may differ.
-- Works on **Linux** (Raspberry Pi OS / Debian, BlueZ 5.82, through `gatttool`) and **macOS** (through `bleak`); reading and writing presets were verified on both. **Windows has not been tried.**
+- Works on **Linux** (Raspberry Pi OS / Debian, BlueZ 5.82) and **macOS**; reading and writing presets were verified on both. **Windows has not been tried.**
 - Every preset write is read back and compared. Even so: **back up your pedal first** (`lekato.py backup`), and expect rough edges.
 
 ## What you need
 
 - The pedal, switched on and within Bluetooth range.
 - Python 3.8 or newer and `pip install bleak`.
-- On Linux, BlueZ's `gatttool` as well (package `bluez` or `bluez-deprecated` depending on the distribution). See "Linux" below for why.
+- On Linux, `alsa-utils` 1.2.9 or newer as well (for `aconnect`, `aseqdump` and `aseqsend`). See "Linux" below.
 - The phone app **disconnected**. The pedal accepts one Bluetooth LE connection at a time. On iOS, closing the app is not always enough; turn Bluetooth off in Settings.
 
 ## Quick start
@@ -97,7 +97,19 @@ The first run asks for Bluetooth permission for the terminal application you run
 
 ## Linux
 
-Stock BlueZ is built with a MIDI plugin that claims every BLE-MIDI device. A write through BlueZ's normal API, which `bleak` uses, is then refused with "Insufficient Authorization". `lekato.py` therefore drives `gatttool` on Linux when it is installed (`--transport gatttool`, chosen automatically) and uses `bleak` only to find the pedal by name. The alternative is to start `bluetoothd` with `-P midi`.
+BlueZ has a MIDI plugin that takes over any Bluetooth MIDI device and exposes it as a normal ALSA MIDI port. That is the path `lekato.py` uses on Linux: `bleak` finds the pedal and holds the connection, and the MIDI itself goes through the port with `alsa-utils`. Nothing needs configuring.
+
+The same plugin is why a direct write through `bleak` fails on Linux with "Insufficient Authorization": the plugin has claimed the device.
+
+`--transport` selects the path explicitly:
+
+| Transport | Used when | Notes |
+|---|---|---|
+| `alsa` | Linux, if `aseqsend` is installed (the default) | The system MIDI port. Tested |
+| `gatttool` | Linux fallback if `alsa-utils` is too old | Drives BlueZ's deprecated `gatttool`, which bypasses the plugin. Tested |
+| `bleak` | macOS and Windows | Direct BLE-MIDI. Tested on macOS. On Linux it works only if `bluetoothd` is started with `-P midi` |
+
+While the pedal is connected this way it also appears to any other MIDI software on the machine as "JME STOMPBOX".
 
 ## Things to know before you experiment
 

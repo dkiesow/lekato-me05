@@ -8,6 +8,7 @@ Worked out from Bluetooth packet captures of the official iOS app and from readi
 - No pairing and no encryption.
 - Standard BLE-MIDI: service `03B80E5A-EDE8-4B33-A751-6CE34EC4C700`, characteristic `7772E5DB-3868-4112-A1A9-F2669D106BF3` (write without response, notify).
 - The pedal asks for an MTU of 517. Preset messages are about 140 bytes, so the default 23-byte MTU is not enough.
+- Because it is standard BLE-MIDI, operating systems can present the pedal as an ordinary MIDI port (BlueZ does this on Linux by default). Over such a port the messages below are sent as plain MIDI, without the BLE framing.
 - A separate classic-Bluetooth device with the next-lower address carries audio (A2DP sink) and two serial-port services. Those were not explored.
 
 ## Message forms

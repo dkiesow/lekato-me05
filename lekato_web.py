@@ -302,7 +302,7 @@ async def main():
     ap.add_argument("--mock", help="serve a simulated pedal from this backup file instead of using Bluetooth")
     ap.add_argument("--name", default="JME")
     ap.add_argument("--address")
-    ap.add_argument("--transport", choices=["auto", "bleak", "gatttool"], default="auto")
+    ap.add_argument("--transport", choices=["auto", "alsa", "bleak", "gatttool"], default="auto")
     args = ap.parse_args()
     sess = Session(args)
     server = await asyncio.start_server(lambda r, w: serve_client(sess, r, w), args.bind, args.port)

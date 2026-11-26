@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """lekato.py - read, write, back up and restore presets on a Lekato JME-01 (ME-05) pedal over Bluetooth LE.
 
-Needs Python 3.8+ and `pip install bleak`. On Linux it also uses BlueZ's `gatttool` (see GatttoolPedal for why).
+Needs Python 3.8+ and `pip install bleak`. On Linux it also uses alsa-utils (see AlsaPedal), or BlueZ's `gatttool` as a fallback.
 Unofficial; tested on one pedal, firmware V1.1.1.
 The pedal accepts one Bluetooth LE connection, so close the phone app (or turn the phone's Bluetooth off) first.
 
@@ -276,6 +276,13 @@ class Pedal:
         except Exception:
             pass
 
+    async def _send_midi(self, msg: bytes):
+        """Send one MIDI message. Here it is wrapped in BLE-MIDI framing: header, timestamp, and a timestamp before F7."""
+        if msg[0] == 0xF0:
+            await self._send(b"\x80\x80" + msg[:-1] + b"\x80\xf7")
+        else:
+            await self._send(b"\x80\x80" + msg)
+
     async def _send(self, data: bytes):
         await self.client.write_gatt_char(MIDI_CHAR, data, response=False)
 
@@ -296,14 +303,14 @@ class Pedal:
                 self._sysex.append(b)
 
     async def midi(self, msg: bytes, pause=0.15):
-        await self._send(b"\x80\x80" + msg)
+        await self._send_midi(msg)
         await asyncio.sleep(pause)
 
     async def ask(self, body: bytes, timeout=3.0) -> bytes:
         for attempt in range(2):                    # the pedal occasionally drops a request sent right after a knob change
             while not self._replies.empty():
                 self._replies.get_nowait()
-            await self._send(b"\x80\x80\xf0" + MFR + body + b"\x80\xf7")
+            await self._send_midi(b"\xf0" + MFR + body + b"\xf7")
             try:
                 return await asyncio.wait_for(self._replies.get(), timeout)
             except asyncio.TimeoutError:
@@ -486,12 +493,85 @@ class GatttoolPedal(Pedal):
         await asyncio.sleep(0.05)
 
 
+class AlsaPedal(Pedal):
+    """Linux transport that uses the MIDI port BlueZ itself creates for the pedal.
+
+    BlueZ's MIDI plugin exposes a connected BLE-MIDI device as an ALSA sequencer port. bleak is used only to find the
+    pedal and hold the connection; the MIDI goes through alsa-utils (`aconnect`, `aseqdump`, `aseqsend`). No system
+    settings are changed and nothing deprecated is involved. Needs alsa-utils 1.2.9 or newer for `aseqsend`."""
+
+    async def __aenter__(self):
+        from bleak import BleakClient
+        import shutil
+        self._replies = asyncio.Queue()
+        dev = await self._find()
+        self.client = BleakClient(dev)
+        await self.client.connect()
+        self.port = None
+        for _ in range(30):                             # the port appears a moment after the link comes up
+            p = await asyncio.create_subprocess_exec("aconnect", "-l", stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.DEVNULL)
+            out = (await p.communicate())[0].decode("utf-8", "replace")
+            m = [re.match(r"client (\d+): '([^']*)'", line) for line in out.splitlines()]
+            hits = [x.group(1) for x in m if x and self.name.upper() in x.group(2).upper()]
+            if hits:
+                self.port = hits[0] + ":0"
+                break
+            await asyncio.sleep(0.2)
+        if self.port is None:
+            await self.__aexit__()
+            raise SystemExit("Connected, but BlueZ did not create a MIDI port for the pedal (is its MIDI plugin disabled?). Try --transport gatttool or bleak.")
+        cmd = ["aseqdump", "-p", self.port]
+        if shutil.which("stdbuf"):
+            cmd = ["stdbuf", "-oL"] + cmd
+        self.proc = await asyncio.create_subprocess_exec(*cmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.DEVNULL)
+        self._reader = asyncio.ensure_future(self._read())
+        await asyncio.sleep(0.3)
+        return self
+
+    async def __aexit__(self, *exc):
+        for step in (lambda: self.proc.kill(), lambda: self._reader.cancel()):
+            try:
+                step()
+            except Exception:
+                pass
+        try:
+            await self.client.disconnect()
+        except Exception:
+            pass
+
+    async def _read(self):
+        while True:
+            line = (await self.proc.stdout.readline()).decode("ascii", "replace")
+            if not line:
+                return
+            m = re.search(r"System exclusive\s+((?:[0-9A-Fa-f]{2}\s*)+)", line)
+            if m:
+                b = bytes.fromhex(m.group(1).replace(" ", ""))
+                if b[1:4] == MFR and b[-1] == 0xF7:
+                    self._replies.put_nowait(b[4:-1])
+                continue
+            m = re.search(r"Control change\s+(\d+), controller (\d+), value (\d+)", line)
+            if m:
+                self.cc_seen.append(tuple(int(x) for x in m.groups()))
+
+    async def _send_midi(self, msg: bytes):
+        p = await asyncio.create_subprocess_exec("aseqsend", "-p", self.port, msg.hex(" ").upper(), stdout=asyncio.subprocess.DEVNULL, stderr=asyncio.subprocess.PIPE)
+        err = (await p.communicate())[1]
+        if p.returncode:
+            raise SystemExit("aseqsend failed: %s" % err.decode("utf-8", "replace").strip())
+
+
 def open_pedal(a):
     import shutil
     transport = a.transport
     if transport == "auto":
-        transport = "gatttool" if sys.platform.startswith("linux") and shutil.which("gatttool") else "bleak"
-    return (GatttoolPedal if transport == "gatttool" else Pedal)(name=a.name, address=a.address)
+        if sys.platform.startswith("linux") and all(shutil.which(t) for t in ("aconnect", "aseqdump", "aseqsend")):
+            transport = "alsa"
+        elif sys.platform.startswith("linux") and shutil.which("gatttool"):
+            transport = "gatttool"
+        else:
+            transport = "bleak"
+    return {"alsa": AlsaPedal, "gatttool": GatttoolPedal, "bleak": Pedal}[transport](name=a.name, address=a.address)
 
 
 def _slot(slot):
@@ -663,8 +743,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--name", default="JME", help="text the pedal's Bluetooth name contains (default: JME)")
     ap.add_argument("--address", help="Bluetooth address (Linux/Windows) or device UUID (macOS), instead of searching by name")
-    ap.add_argument("--transport", choices=["auto", "bleak", "gatttool"], default="auto",
-                    help="auto picks gatttool on Linux when it is installed (see GatttoolPedal), bleak elsewhere")
+    ap.add_argument("--transport", choices=["auto", "alsa", "bleak", "gatttool"], default="auto",
+                    help="auto: on Linux the system MIDI port (alsa) if alsa-utils has aseqsend, else gatttool; bleak elsewhere")
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("info")
     sub.add_parser("list")
