@@ -48,8 +48,8 @@
    "knobs": {
     "Mic": 4,
     "Position": 0,
-    "Low (Cut)(hz)": 0,
-    "High Cut(hz)": 100,
+    "Low Cut(Hz)": 0,
+    "High Cut(Hz)": 100,
     "Volume": 50
    }
   },

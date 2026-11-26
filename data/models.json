@@ -234,7 +234,7 @@
     0,
     31
    ],
-   "notes": "Only one knob - has additional on/off"
+   "notes": "Knob 1 is an on/off switch (0 or 1), not a level. Volume is the only level control."
   },
   {
    "app": 15,
@@ -1159,8 +1159,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1170,7 +1170,7 @@
     100,
     50
    ],
-   "notes": "There are 8 mics in each Cab 'mic' knob setting: E906, M160, MD421, R121, SM57, SM58, SM7b, U47"
+   "notes": null
   },
   {
    "app": 2,
@@ -1179,8 +1179,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1199,8 +1199,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1219,8 +1219,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1239,8 +1239,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1259,8 +1259,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1279,8 +1279,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1299,8 +1299,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1319,8 +1319,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1339,8 +1339,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1359,8 +1359,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1379,8 +1379,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1399,8 +1399,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1419,8 +1419,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1439,8 +1439,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1459,8 +1459,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1479,8 +1479,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1499,8 +1499,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1519,8 +1519,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1539,8 +1539,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1559,8 +1559,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1579,8 +1579,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1599,8 +1599,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1619,8 +1619,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1639,8 +1639,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1659,8 +1659,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1679,8 +1679,8 @@
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1695,12 +1695,12 @@
   {
    "app": 28,
    "value": 27,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1715,12 +1715,12 @@
   {
    "app": 29,
    "value": 28,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1735,12 +1735,12 @@
   {
    "app": 30,
    "value": 29,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1755,12 +1755,12 @@
   {
    "app": 31,
    "value": 30,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1775,12 +1775,12 @@
   {
    "app": 32,
    "value": 31,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1795,12 +1795,12 @@
   {
    "app": 33,
    "value": 32,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1815,12 +1815,12 @@
   {
    "app": 34,
    "value": 33,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1835,12 +1835,12 @@
   {
    "app": 35,
    "value": 34,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1855,12 +1855,12 @@
   {
    "app": 36,
    "value": 35,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1875,12 +1875,12 @@
   {
    "app": 37,
    "value": 36,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1895,12 +1895,12 @@
   {
    "app": 38,
    "value": 37,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1915,12 +1915,12 @@
   {
    "app": 39,
    "value": 38,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1935,12 +1935,12 @@
   {
    "app": 40,
    "value": 39,
-   "name": "--------",
+   "name": "(empty)",
    "knobs": [
     "Mic",
     "Position",
-    "Low (Cut)(hz)",
-    "High Cut(hz)",
+    "Low Cut(Hz)",
+    "High Cut(Hz)",
     "Volume"
    ],
    "defaults": [
@@ -1961,8 +1961,8 @@
    "knobs": [
     "100Hz(dB)",
     "220Hz(dB)",
-    "500HZ(dB)",
-    "1,2kHz(dB)",
+    "500Hz(dB)",
+    "1.2kHz(dB)",
     "2.5kHz(dB)",
     "6.4kHz(dB)"
    ],
@@ -1987,7 +1987,7 @@
     "125Hz(dB)",
     "250Hz(dB)",
     "500Hz(dB)",
-    "1Khz(dB)",
+    "1kHz(dB)",
     "2kHz(dB)",
     "4kHz(dB)",
     "8kHz(dB)",
@@ -2086,7 +2086,7 @@
     72,
     80
    ],
-   "notes": null
+   "notes": "L and R are pitch shifts for the left and right channels, shown 0-100. Which value means no shift was not confirmed."
   },
   {
    "app": 6,
@@ -2148,7 +2148,7 @@
     0,
     58
    ],
-   "notes": "Mode has two options: Chorus, Flanger"
+   "notes": "Mode is a switch: 0 Chorus, 1 Flanger."
   },
   {
    "app": 10,
@@ -2166,7 +2166,7 @@
     40,
     0
    ],
-   "notes": "Mode has two options: Chorus, Vibe"
+   "notes": "Mode is a switch: 0 Chorus, 1 Vibe."
   },
   {
    "app": 11,
@@ -2214,7 +2214,7 @@
     0,
     50
    ],
-   "notes": "Key has options for all twelve major/minor notes; Mode has two options: Major/Minor; Harm has -8th, -6th, -5th, -3th and repeated for the sme numbers but positive."
+   "notes": "Key: the twelve notes. Mode: Major or Minor. Harm: interval, from -8th through -6th, -5th, -3rd to +3rd, +5th, +6th, +8th. The stored numbering of these lists was not confirmed."
   }
  ],
  "Delay": [
@@ -2366,7 +2366,7 @@
     85,
     45
    ],
-   "notes": null
+   "notes": "Pre Delay is in milliseconds, 0-100."
   },
   {
    "app": 3,
@@ -2441,8 +2441,7 @@
    "Metro"
   ],
   "notes": [
-   "Each drum has two knobs: Drum (appears to be a level), BPM",
-   "There are two drop-downs in 'Drum' one is the 10 genres and the second is a list of patterns Pop 01- Pop 10, Rock 01-Rock 10 - same for Metal,Disco,Funk,Blues, Hip Hop, Jazz, Latin, Metro)"
+   "Metronome"
   ],
   "patterns": [
    "Pop 01",
