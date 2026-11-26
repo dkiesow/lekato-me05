@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+~$*.xlsx
+# created at run time; preset names and backups are your own pedal's content
+data/preset_names.json
+backups/
+*.backup.json

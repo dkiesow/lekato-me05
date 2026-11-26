@@ -1,0 +1,80 @@
+{
+ "slot": 98,
+ "name": "Example",
+ "volume": 80,
+ "order": [
+  "Gate",
+  "OD-FX",
+  "Amp",
+  "Cab",
+  "EQ",
+  "Mod",
+  "Delay",
+  "Reverb"
+ ],
+ "blocks": {
+  "Gate": {
+   "on": true,
+   "model": "Noise gate",
+   "knobs": {
+    "Threshold": 25,
+    "Decay": 50
+   }
+  },
+  "OD-FX": {
+   "on": true,
+   "model": "TS9",
+   "knobs": {
+    "Drive": 30,
+    "Tone": 55,
+    "Level": 60
+   }
+  },
+  "Amp": {
+   "on": true,
+   "model": "Deluxe Rev",
+   "knobs": {
+    "Gain": 40,
+    "Bass": 45,
+    "Middle": 60,
+    "Treble": 55,
+    "Presence": 50,
+    "Master": 30
+   }
+  },
+  "Cab": {
+   "on": true,
+   "model": "Deluxe 112",
+   "knobs": {
+    "Mic": 4,
+    "Position": 0,
+    "Low (Cut)(hz)": 0,
+    "High Cut(hz)": 100,
+    "Volume": 50
+   }
+  },
+  "EQ": {
+   "on": false
+  },
+  "Mod": {
+   "on": false
+  },
+  "Delay": {
+   "on": true,
+   "model": "Tape Delay",
+   "knobs": {
+    "Time": 40,
+    "Feedback": 25,
+    "Level": 25
+   }
+  },
+  "Reverb": {
+   "on": true,
+   "model": "Spring",
+   "knobs": {
+    "Mix": 25,
+    "Decay": 40
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+# systemd user unit. Assumes this repository is at ~/lekato with a virtualenv in ~/lekato/.venv.
+# Install: copy to ~/.config/systemd/user/, then  systemctl --user enable --now lekato-web
+[Unit]
+Description=Lekato pedal touch page (preset select and live knobs) on port 8766
+After=bluetooth.target
+
+[Service]
+WorkingDirectory=%h/lekato
+ExecStart=%h/lekato/.venv/bin/python %h/lekato/lekato_web.py --port 8766 --idle 600
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,2554 @@
+{
+ "Gate": [
+  {
+   "app": 1,
+   "value": 0,
+   "name": "Noise gate",
+   "knobs": [
+    "Threshold",
+    "Decay"
+   ],
+   "defaults": [
+    20,
+    50
+   ],
+   "notes": null
+  }
+ ],
+ "OD-FX": [
+  {
+   "app": 1,
+   "value": 0,
+   "name": "Red Comp",
+   "knobs": [
+    "Output",
+    "Sensitivity"
+   ],
+   "defaults": [
+    81,
+    20
+   ],
+   "notes": null
+  },
+  {
+   "app": 2,
+   "value": 1,
+   "name": "RS Comp",
+   "knobs": [
+    "Sustain",
+    "Level"
+   ],
+   "defaults": [
+    35,
+    66
+   ],
+   "notes": null
+  },
+  {
+   "app": 3,
+   "value": 2,
+   "name": "Yellow Dist",
+   "knobs": [
+    "Output",
+    "Distortion"
+   ],
+   "defaults": [
+    90,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 4,
+   "value": 3,
+   "name": "Boost RC",
+   "knobs": [
+    "Gain",
+    "Volume",
+    "Bass",
+    "Treble"
+   ],
+   "defaults": [
+    4,
+    48,
+    36,
+    57
+   ],
+   "notes": null
+  },
+  {
+   "app": 5,
+   "value": 4,
+   "name": "Boost AC",
+   "knobs": [
+    "Gain",
+    "Volume",
+    "Bass",
+    "Treble"
+   ],
+   "defaults": [
+    59,
+    30,
+    34,
+    59
+   ],
+   "notes": null
+  },
+  {
+   "app": 6,
+   "value": 5,
+   "name": "DS1",
+   "knobs": [
+    "Gain",
+    "Tone",
+    "Volume"
+   ],
+   "defaults": [
+    39,
+    45,
+    63
+   ],
+   "notes": null
+  },
+  {
+   "app": 7,
+   "value": 6,
+   "name": "TS9",
+   "knobs": [
+    "Drive",
+    "Tone",
+    "Level"
+   ],
+   "defaults": [
+    60,
+    62,
+    44
+   ],
+   "notes": null
+  },
+  {
+   "app": 8,
+   "value": 7,
+   "name": "BD2",
+   "knobs": [
+    "Level",
+    "Tone",
+    "Gain"
+   ],
+   "defaults": [
+    33,
+    39,
+    66
+   ],
+   "notes": null
+  },
+  {
+   "app": 9,
+   "value": 8,
+   "name": "Klone",
+   "knobs": [
+    "Volume",
+    "Drive",
+    "Tone"
+   ],
+   "defaults": [
+    60,
+    66,
+    60
+   ],
+   "notes": null
+  },
+  {
+   "app": 10,
+   "value": 9,
+   "name": "Ratt2",
+   "knobs": [
+    "Dist",
+    "Filter",
+    "Volume"
+   ],
+   "defaults": [
+    61,
+    62,
+    56
+   ],
+   "notes": null
+  },
+  {
+   "app": 11,
+   "value": 10,
+   "name": "Red Drive",
+   "knobs": [
+    "Drive",
+    "Tone",
+    "Level"
+   ],
+   "defaults": [
+    66,
+    55,
+    45
+   ],
+   "notes": null
+  },
+  {
+   "app": 12,
+   "value": 11,
+   "name": "Cruncher",
+   "knobs": [
+    "Volume",
+    "Tone",
+    "Gain"
+   ],
+   "defaults": [
+    11,
+    79,
+    56
+   ],
+   "notes": null
+  },
+  {
+   "app": 13,
+   "value": 12,
+   "name": "Muff",
+   "knobs": [
+    "Volume",
+    "Tone",
+    "Sustain"
+   ],
+   "defaults": [
+    40,
+    39,
+    55
+   ],
+   "notes": null
+  },
+  {
+   "app": 14,
+   "value": 13,
+   "name": "Boost",
+   "knobs": [
+    "On / Off",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    31
+   ],
+   "notes": "Only one knob - has additional on/off"
+  },
+  {
+   "app": 15,
+   "value": 14,
+   "name": "Face Fuzz",
+   "knobs": [
+    "Gain",
+    "Tone",
+    "Output"
+   ],
+   "defaults": [
+    33,
+    39,
+    66
+   ],
+   "notes": null
+  },
+  {
+   "app": 16,
+   "value": 15,
+   "name": "St Drive",
+   "knobs": [
+    "Volume",
+    "Gain",
+    "Filter"
+   ],
+   "defaults": [
+    33,
+    39,
+    66
+   ],
+   "notes": null
+  }
+ ],
+ "Amp": [
+  {
+   "app": 1,
+   "value": 0,
+   "name": "Black Twin",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    52,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 2,
+   "value": 1,
+   "name": "Tweed 5F1",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    63,
+    35,
+    42,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 3,
+   "value": 2,
+   "name": "Prince Rev",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    45,
+    40,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 4,
+   "value": 3,
+   "name": "Bassguy",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    46,
+    40,
+    64,
+    52,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 5,
+   "value": 4,
+   "name": "Tweed 5F8",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    62,
+    38,
+    55,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 6,
+   "value": 5,
+   "name": "Deluxe Rev",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    40,
+    45,
+    70,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 7,
+   "value": 6,
+   "name": "Bdtone CL",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    80,
+    45,
+    56,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 8,
+   "value": 7,
+   "name": "Voxy 30HW",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    65,
+    38,
+    40,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 9,
+   "value": 8,
+   "name": "Mar J800",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    65,
+    38,
+    40,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 10,
+   "value": 9,
+   "name": "Mar J45",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    60,
+    45,
+    40,
+    45,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 11,
+   "value": 10,
+   "name": "Mar Plexi100",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    80,
+    50,
+    42,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 12,
+   "value": 11,
+   "name": "Jazz CL",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    70,
+    45,
+    50,
+    45,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 13,
+   "value": 12,
+   "name": "Mes Rector",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    75,
+    37,
+    55,
+    65,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 14,
+   "value": 13,
+   "name": "Mes MKIV Lead",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    78,
+    37,
+    55,
+    65,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 15,
+   "value": 14,
+   "name": "Mes MKV Red",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    75,
+    60,
+    50,
+    55,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 16,
+   "value": 15,
+   "name": "Mes Lstar CL",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    35,
+    45,
+    50,
+    60,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 17,
+   "value": 16,
+   "name": "Cornfed M50",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    60,
+    50,
+    50,
+    47,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 18,
+   "value": 17,
+   "name": "ODS-100",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    85,
+    65,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 19,
+   "value": 18,
+   "name": "Spawn Qrod",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    70,
+    40,
+    45,
+    55,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 20,
+   "value": 19,
+   "name": "Soloist 100",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    90,
+    57,
+    42,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 21,
+   "value": 20,
+   "name": "Fryman HB",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    70,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 22,
+   "value": 21,
+   "name": "Fryman DS",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    40,
+    35,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 23,
+   "value": 22,
+   "name": "PVH 61",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    60,
+    55,
+    45,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 24,
+   "value": 23,
+   "name": "Eddie 51",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    55,
+    45,
+    40,
+    55,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 25,
+   "value": 24,
+   "name": "2Rock J35",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    60,
+    50,
+    60,
+    55,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 26,
+   "value": 25,
+   "name": "Ampug SV Bass",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    60,
+    60,
+    60,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 27,
+   "value": 26,
+   "name": "Ampug Port Bass",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    60,
+    50,
+    35,
+    75,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 28,
+   "value": 27,
+   "name": "FR Bass",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    45,
+    50,
+    45,
+    55,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 29,
+   "value": 28,
+   "name": "Mes 400 Bass",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    35,
+    55,
+    45,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 30,
+   "value": 29,
+   "name": "Agula DP571",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    30,
+    50,
+    40,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 31,
+   "value": 30,
+   "name": "User AMP 01",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 32,
+   "value": 31,
+   "name": "User AMP 02",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 33,
+   "value": 32,
+   "name": "User AMP 03",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 34,
+   "value": 33,
+   "name": "User AMP 04",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 35,
+   "value": 34,
+   "name": "User AMP 05",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 36,
+   "value": 35,
+   "name": "User AMP 06",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 37,
+   "value": 36,
+   "name": "User AMP 07",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 38,
+   "value": 37,
+   "name": "User AMP 08",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 39,
+   "value": 38,
+   "name": "User AMP 09",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 40,
+   "value": 39,
+   "name": "User AMP 10",
+   "knobs": [
+    "Gain",
+    "Bass",
+    "Middle",
+    "Treble",
+    "Presence",
+    "Master"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  }
+ ],
+ "Cab": [
+  {
+   "app": 1,
+   "value": 0,
+   "name": "Twin 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": "There are 8 mics in each Cab 'mic' knob setting: E906, M160, MD421, R121, SM57, SM58, SM7b, U47"
+  },
+  {
+   "app": 2,
+   "value": 1,
+   "name": "Tweed 110",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    4,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 3,
+   "value": 2,
+   "name": "Bassguy 410",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    2,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 4,
+   "value": 3,
+   "name": "Prince 112",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    7,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 5,
+   "value": 4,
+   "name": "Tweed 210",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    1,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 6,
+   "value": 5,
+   "name": "Deluxe 112",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    6,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 7,
+   "value": 6,
+   "name": "Bdtone 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 8,
+   "value": 7,
+   "name": "Voxy 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    3,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 9,
+   "value": 8,
+   "name": "Mar G12Mv 412",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    3,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 10,
+   "value": 9,
+   "name": "Mar Silver 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    5,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 11,
+   "value": 10,
+   "name": "Mar V30 412",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    2,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 12,
+   "value": 11,
+   "name": "Jaxx 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    2,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 13,
+   "value": 12,
+   "name": "Mes OS 412",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    4,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 14,
+   "value": 13,
+   "name": "Mes Trad 412",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    1,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 15,
+   "value": 14,
+   "name": "Mes V30 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 16,
+   "value": 15,
+   "name": "Mes EV 112",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    7,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 17,
+   "value": 16,
+   "name": "Cornfed 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 18,
+   "value": 17,
+   "name": "ODS 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 19,
+   "value": 18,
+   "name": "Spawn 412",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    5,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 20,
+   "value": 19,
+   "name": "SLO 412",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    6,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 21,
+   "value": 20,
+   "name": "Fryman 412",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 22,
+   "value": 21,
+   "name": "Eddie 412",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    2,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 23,
+   "value": 22,
+   "name": "2Rock 212",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 24,
+   "value": 23,
+   "name": "Ampug 410",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    4,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 25,
+   "value": 24,
+   "name": "FR 210",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 26,
+   "value": 25,
+   "name": "Mes 410",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    1,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 27,
+   "value": 26,
+   "name": "Agula 810",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    4,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 28,
+   "value": 27,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 29,
+   "value": 28,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    4,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 30,
+   "value": 29,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    1,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 31,
+   "value": 30,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 32,
+   "value": 31,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 33,
+   "value": 32,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 34,
+   "value": 33,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 35,
+   "value": 34,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 36,
+   "value": 35,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 37,
+   "value": 36,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 38,
+   "value": 37,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 39,
+   "value": 38,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 40,
+   "value": 39,
+   "name": "--------",
+   "knobs": [
+    "Mic",
+    "Position",
+    "Low (Cut)(hz)",
+    "High Cut(hz)",
+    "Volume"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    100,
+    50
+   ],
+   "notes": null
+  }
+ ],
+ "EQ": [
+  {
+   "app": 1,
+   "value": 0,
+   "name": "6-band EQ",
+   "knobs": [
+    "100Hz(dB)",
+    "220Hz(dB)",
+    "500HZ(dB)",
+    "1,2kHz(dB)",
+    "2.5kHz(dB)",
+    "6.4kHz(dB)"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 2,
+   "value": 1,
+   "name": "10-band EQ",
+   "knobs": [
+    "Gain",
+    "31Hz(dB)",
+    "62.5Hz(dB)",
+    "125Hz(dB)",
+    "250Hz(dB)",
+    "500Hz(dB)",
+    "1Khz(dB)",
+    "2kHz(dB)",
+    "4kHz(dB)",
+    "8kHz(dB)",
+    "16kHz(dB)",
+    "Volume(dB)"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  }
+ ],
+ "Mod": [
+  {
+   "app": 1,
+   "value": 0,
+   "name": "Chorus-1",
+   "knobs": [
+    "Intensity",
+    "Depth",
+    "Rate"
+   ],
+   "defaults": [
+    50,
+    50,
+    20
+   ],
+   "notes": null
+  },
+  {
+   "app": 2,
+   "value": 1,
+   "name": "Chorus-2",
+   "knobs": [
+    "Rate",
+    "Depth"
+   ],
+   "defaults": [
+    69,
+    41
+   ],
+   "notes": null
+  },
+  {
+   "app": 3,
+   "value": 2,
+   "name": "Stereo Chorus",
+   "knobs": [
+    "Intensity",
+    "Width",
+    "Rate"
+   ],
+   "defaults": [
+    71,
+    50,
+    72
+   ],
+   "notes": null
+  },
+  {
+   "app": 4,
+   "value": 3,
+   "name": "Vibrato",
+   "knobs": [
+    "Rate",
+    "Depth"
+   ],
+   "defaults": [
+    25,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 5,
+   "value": 4,
+   "name": "Detune",
+   "knobs": [
+    "L",
+    "Mix",
+    "R"
+   ],
+   "defaults": [
+    20,
+    72,
+    80
+   ],
+   "notes": null
+  },
+  {
+   "app": 6,
+   "value": 5,
+   "name": "Flanger",
+   "knobs": [
+    "Level",
+    "Rate",
+    "Width",
+    "Feedback"
+   ],
+   "defaults": [
+    50,
+    50,
+    50,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 7,
+   "value": 6,
+   "name": "Phaser 90",
+   "knobs": [
+    "Speed"
+   ],
+   "defaults": [
+    68
+   ],
+   "notes": null
+  },
+  {
+   "app": 8,
+   "value": 7,
+   "name": "Phaser 100",
+   "knobs": [
+    "Intensity",
+    "Speed"
+   ],
+   "defaults": [
+    61,
+    30
+   ],
+   "notes": null
+  },
+  {
+   "app": 9,
+   "value": 8,
+   "name": "Chorus +",
+   "knobs": [
+    "Speed",
+    "Width",
+    "Mode",
+    "Intensity"
+   ],
+   "defaults": [
+    58,
+    46,
+    0,
+    58
+   ],
+   "notes": "Mode has two options: Chorus, Flanger"
+  },
+  {
+   "app": 10,
+   "value": 9,
+   "name": "Uni Vibe",
+   "knobs": [
+    "Speed",
+    "Volume",
+    "Intensity",
+    "Mode"
+   ],
+   "defaults": [
+    66,
+    78,
+    40,
+    0
+   ],
+   "notes": "Mode has two options: Chorus, Vibe"
+  },
+  {
+   "app": 11,
+   "value": 10,
+   "name": "Tremolo",
+   "knobs": [
+    "Depth",
+    "Rate"
+   ],
+   "defaults": [
+    65,
+    18
+   ],
+   "notes": null
+  },
+  {
+   "app": 12,
+   "value": 11,
+   "name": "Chorus-3",
+   "knobs": [
+    "Rate",
+    "Depth",
+    "Tone"
+   ],
+   "defaults": [
+    61,
+    30,
+    50
+   ],
+   "notes": null
+  },
+  {
+   "app": 13,
+   "value": 12,
+   "name": "Harmony",
+   "knobs": [
+    "Key",
+    "Mode",
+    "Harm",
+    "Mix"
+   ],
+   "defaults": [
+    0,
+    0,
+    0,
+    50
+   ],
+   "notes": "Key has options for all twelve major/minor notes; Mode has two options: Major/Minor; Harm has -8th, -6th, -5th, -3th and repeated for the sme numbers but positive."
+  }
+ ],
+ "Delay": [
+  {
+   "app": 1,
+   "value": 0,
+   "name": "Analog Delay",
+   "knobs": [
+    "Time",
+    "Feedback",
+    "Level"
+   ],
+   "defaults": [
+    100,
+    32,
+    36
+   ],
+   "notes": null
+  },
+  {
+   "app": 2,
+   "value": 1,
+   "name": "Digital Delay",
+   "knobs": [
+    "Time",
+    "Feedback",
+    "Level"
+   ],
+   "defaults": [
+    33,
+    36,
+    68
+   ],
+   "notes": null
+  },
+  {
+   "app": 3,
+   "value": 2,
+   "name": "Mod Delay",
+   "knobs": [
+    "Time",
+    "Feedback",
+    "Mod",
+    "Level"
+   ],
+   "defaults": [
+    48,
+    28,
+    59,
+    25
+   ],
+   "notes": null
+  },
+  {
+   "app": 4,
+   "value": 3,
+   "name": "Tape Delay",
+   "knobs": [
+    "Time",
+    "Feedback",
+    "Level"
+   ],
+   "defaults": [
+    100,
+    37,
+    49
+   ],
+   "notes": null
+  },
+  {
+   "app": 5,
+   "value": 4,
+   "name": "Reverse Delay",
+   "knobs": [
+    "Time",
+    "Feedback",
+    "Level"
+   ],
+   "defaults": [
+    47,
+    51,
+    44
+   ],
+   "notes": null
+  },
+  {
+   "app": 6,
+   "value": 5,
+   "name": "Pan Delay",
+   "knobs": [
+    "Time",
+    "Feedback",
+    "Level"
+   ],
+   "defaults": [
+    33,
+    36,
+    68
+   ],
+   "notes": null
+  },
+  {
+   "app": 7,
+   "value": 6,
+   "name": "Physical Delay",
+   "knobs": [
+    "Time",
+    "Feedback",
+    "Level"
+   ],
+   "defaults": [
+    47,
+    51,
+    44
+   ],
+   "notes": null
+  }
+ ],
+ "Reverb": [
+  {
+   "app": 1,
+   "value": 0,
+   "name": "Room",
+   "knobs": [
+    "Decay",
+    "Tone",
+    "Level"
+   ],
+   "defaults": [
+    71,
+    69,
+    38
+   ],
+   "notes": null
+  },
+  {
+   "app": 2,
+   "value": 1,
+   "name": "Hall",
+   "knobs": [
+    "Decay",
+    "Tone",
+    "Pre Delay (ms)",
+    "Level"
+   ],
+   "defaults": [
+    77,
+    59,
+    85,
+    45
+   ],
+   "notes": null
+  },
+  {
+   "app": 3,
+   "value": 2,
+   "name": "Plate",
+   "knobs": [
+    "Decay",
+    "Level"
+   ],
+   "defaults": [
+    36,
+    42
+   ],
+   "notes": null
+  },
+  {
+   "app": 4,
+   "value": 3,
+   "name": "Spring",
+   "knobs": [
+    "Mix",
+    "Decay"
+   ],
+   "defaults": [
+    35,
+    27
+   ],
+   "notes": null
+  },
+  {
+   "app": 5,
+   "value": 4,
+   "name": "Shimmer",
+   "knobs": [
+    "Level",
+    "Decay",
+    "Shimmer"
+   ],
+   "defaults": [
+    46,
+    41,
+    13
+   ],
+   "notes": null
+  },
+  {
+   "app": 6,
+   "value": 5,
+   "name": "Damp",
+   "knobs": [
+    "Level",
+    "Depth"
+   ],
+   "defaults": [
+    36,
+    42
+   ],
+   "notes": null
+  }
+ ],
+ "Drum": {
+  "genres": [
+   "Pop",
+   "Rock",
+   "Metal",
+   "Disco",
+   "Funk",
+   "Blues",
+   "Hip Hop",
+   "Jazz",
+   "Latin",
+   "Metro"
+  ],
+  "notes": [
+   "Each drum has two knobs: Drum (appears to be a level), BPM",
+   "There are two drop-downs in 'Drum' one is the 10 genres and the second is a list of patterns Pop 01- Pop 10, Rock 01-Rock 10 - same for Metal,Disco,Funk,Blues, Hip Hop, Jazz, Latin, Metro)"
+  ],
+  "patterns": [
+   "Pop 01",
+   "Pop 02",
+   "Pop 03",
+   "Pop 04",
+   "Pop 05",
+   "Pop 06",
+   "Pop 07",
+   "Pop 08",
+   "Pop 09",
+   "Pop 10",
+   "Rock 01",
+   "Rock 02",
+   "Rock 03",
+   "Rock 04",
+   "Rock 05",
+   "Rock 06",
+   "Rock 07",
+   "Rock 08",
+   "Rock 09",
+   "Rock 10",
+   "Metal 01",
+   "Metal 02",
+   "Metal 03",
+   "Metal 04",
+   "Metal 05",
+   "Metal 06",
+   "Metal 07",
+   "Metal 08",
+   "Metal 09",
+   "Metal 10",
+   "Disco 01",
+   "Disco 02",
+   "Disco 03",
+   "Disco 04",
+   "Disco 05",
+   "Disco 06",
+   "Disco 07",
+   "Disco 08",
+   "Disco 09",
+   "Disco 10",
+   "Funk 01",
+   "Funk 02",
+   "Funk 03",
+   "Funk 04",
+   "Funk 05",
+   "Funk 06",
+   "Funk 07",
+   "Funk 08",
+   "Funk 09",
+   "Funk 10",
+   "Blues 01",
+   "Blues 02",
+   "Blues 03",
+   "Blues 04",
+   "Blues 05",
+   "Blues 06",
+   "Blues 07",
+   "Blues 08",
+   "Blues 09",
+   "Blues 10",
+   "Hip Hop 01",
+   "Hip Hop 02",
+   "Hip Hop 03",
+   "Hip Hop 04",
+   "Hip Hop 05",
+   "Hip Hop 06",
+   "Hip Hop 07",
+   "Hip Hop 08",
+   "Hip Hop 09",
+   "Hip Hop 10",
+   "Jazz 01",
+   "Jazz 02",
+   "Jazz 03",
+   "Jazz 04",
+   "Jazz 05",
+   "Jazz 06",
+   "Jazz 07",
+   "Jazz 08",
+   "Jazz 09",
+   "Jazz 10",
+   "Latin 01",
+   "Latin 02",
+   "Latin 03",
+   "Latin 04",
+   "Latin 05",
+   "Latin 06",
+   "Latin 07",
+   "Latin 08",
+   "Latin 09",
+   "Latin 10",
+   "Metro 01",
+   "Metro 02",
+   "Metro 03",
+   "Metro 04",
+   "Metro 05",
+   "Metro 06",
+   "Metro 07",
+   "Metro 08",
+   "Metro 09",
+   "Metro 10"
+  ],
+  "knobs": [
+   "Drum (level)",
+   "BPM"
+  ]
+ }
+}
