@@ -7,3 +7,6 @@ __pycache__/
 data/preset_names.json
 backups/
 *.backup.json
+
+# tone.py and ingest.py recordings, reference audio and results
+capture/
