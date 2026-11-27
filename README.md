@@ -2,11 +2,12 @@
 
 Control a Lekato multi-effects pedal (sold as the ME-05, identifies itself as `JME-01`) from a computer over Bluetooth, without the phone app.
 
-This repository has three things:
+This repository has four things:
 
 - **[docs/PROTOCOL.md](docs/PROTOCOL.md)**: the pedal's Bluetooth MIDI protocol, worked out from packet captures of the official app. If you are building your own controller, this is the part you want.
 - **`lekato.py`**: a command-line tool to read, edit, back up and restore presets, and to control the drum machine, looper, tuner and global settings.
 - **`lekato_web.py`**: a small touch page for a Raspberry Pi screen: pick a preset, adjust its knobs live, save when you choose.
+- **`tone.py` and `ingest.py`** (optional): measure the pedal's sound through a microphone, compare it with a reference recording, and derive a starting preset from a recording of the sound you want.
 
 It is unofficial and has no connection to Lekato.
 
@@ -90,6 +91,40 @@ python lekato_web.py --mock my-pedal.json   # simulated pedal from a backup, no 
 - It connects only when asked and lets go after 10 minutes without use (`--idle`), so the phone app can connect again. While it is connected, nothing else can be.
 - [contrib/lekato-web.service](contrib/lekato-web.service) is a systemd user unit for running it on a Raspberry Pi.
 - There is **no authentication**. Anyone who can reach the port can change your pedal. Run it on a trusted network or bind it to localhost (`--bind 127.0.0.1`).
+
+## Tone matching (optional)
+
+Two scripts for working out settings by ear and by measurement. They do not talk to the pedal; set the preset with `lekato.py` or the touch page, then record. Both need `ffmpeg`, `numpy` and `scipy` (`pip install numpy scipy`). Results go to `capture/`, which git ignores.
+
+**`tone.py`** records the amp through a microphone and measures it.
+
+| Command | What it does |
+|---|---|
+| `record NAME [--plucks 3] [--mic DEVICE] [--cal FILE]` | Record open strings, low E to high E, each plucked 3 times (pluck, ring 2 s, damp), then measure each string: level, five band shares, centroid, upper-harmonic ratio, sustain, and the spread between plucks |
+| `analyse FILE.wav [--plucks N] [--cal FILE]` | The same on an existing recording |
+| `compare A B` | Per-string differences between two takes |
+| `part NAME --ref REF [--seconds 30]` | Record yourself playing the same part as a reference recording, then `match` it |
+| `match TAKE REF [--ref-start S] [--ref-end S] [--cal FILE]` | Compare the long-term spectrum of a take with a reference (any format ffmpeg reads); prints octave differences and the change at each of the pedal's six EQ frequencies, in dB |
+
+`--mic` is the input device (macOS: an AVFoundation name or index, run without it to list them; Linux: an ALSA device). The `TONE_MIC` environment variable sets a default. `--cal` applies a measurement microphone's calibration file (frequency and dB per line, as supplied with a Dayton UMM-6 or miniDSP UMIK-1).
+
+What we learned using it: put the microphone within a foot of the speaker and keep it there. At five feet, two takes at identical settings differed by 6 to 14 dB in the bass band, so only loudness could be compared.
+
+**`ingest.py`** analyses a reference recording, such as a guitar solo, and writes a starting preset in `lekato.py apply` format.
+
+```
+python ingest.py solo.m4a --start 95 --end 130 --name "Solo" --slot 10
+python lekato.py apply capture/ingest/Solo_preset.json --slot 10 --dry-run
+```
+
+It measures drive (how much held notes sustain, and how fast the harmonics fall off), modulation (a level wobble inside held notes and chords that the pitch does not share; tremolo if every band moves together, vibe otherwise), delay (an onset's spectrum repeating a fixed time later), reverb (RT60 from note endings) and the spectrum's tilt, and picks models and knob values from fixed rules written into the preset's `notes`. Use an isolated guitar track if you have one; `--separate` runs Demucs to pull the guitar out of a mix, if Demucs is installed (about 2 GB with PyTorch).
+
+Treat its output as a starting point:
+
+- The drive thresholds were set on synthetic test signals, not on real recordings.
+- Three knob mappings are assumptions: Mod Speed (0-100 taken as 0-10 Hz), Delay Time (0-100 taken as 0-1000 ms) and Reverb Decay.
+- A wobble must last three cycles inside one held note or chord, so slow rates (a Leslie's slow setting, under about 1.5 Hz) need long held notes to be seen.
+- Echo and reverb in the reference make the drive read one class low.
 
 ## macOS
 
